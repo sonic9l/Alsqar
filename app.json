@@ -1,0 +1,51 @@
+{
+    "name": "سورس الصقر 𓅂",
+    "description": "سورس الصقر الاول عربيا وعالميا 🫡❤️‍🔥𓅂",
+    "logo": "https://telegra.ph/file/5b76b2a123ccdd9106aec.jpg",
+    "keywords": [
+        "Telegram",
+        "MusicPlayer",
+        "jmthon",
+        "VideoPlayer"
+    ],
+    "repository": "https://github.com/sonic9l/Alsqar",
+    "env": {
+        "SESSION": {
+            "description": "هنا ضع كود البايروكرام",
+            "required": true
+        },
+        "API_ID": {
+            "description": "هنا ضع الايبب ايدي",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "العلامه التي تضعها قبل اسم الامر مثل ( $ • -) تستطيع تغييرها ",
+            "required": false,
+            "value": "!"
+        },
+        "API_HASH": {
+            "description": "هنا ضع الايبي هاش",
+            "required": true
+        },
+        "SUDO_USERS": {
+            "description": "هنا ضع ايدي حسابك كمطور للبوت بمكنك وضع اكثر من شخص بوضع ايدي المستخدم",
+            "required": true
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
